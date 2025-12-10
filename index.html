@@ -28,7 +28,7 @@
 </head>
 
 <body>
-  <div class="hero_area">
+  <div class="hero_area" id="home">
     <!-- header section strats -->
     <header class="header_section">
       <div class="container">
@@ -44,19 +44,19 @@
             <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html"> Acerca de</a>
+                  <a class="nav-link" href="#about"> Acerca de</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="gallery.html"> Galeria </a>
+                  <a class="nav-link" href="#gallery"> Galeria </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contacto</a>
+                  <a class="nav-link" href="#contact">Contacto</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#ubicacion">Ubicación</a>
+                  <a class="nav-link" href="#location">Ubicación</a>
                 </li>
               </ul>
             </div>
@@ -156,7 +156,7 @@
   </div>
 
   <!-- about section -->
-  <section class="about_section ">
+  <section class="about_section" id="about">
     <div class="section_number">
       01
     </div>
@@ -213,7 +213,7 @@
   <!-- end why section -->
 
   <!-- gallery section -->
-  <section class="gallery_section layout_padding">
+  <section class="gallery_section layout_padding" id="gallery">
     <div class="section_number">
       03
     </div>
@@ -299,7 +299,7 @@
 
   <!-- contact section -->
 
-  <section class="contact_section layout_padding">
+  <section class="contact_section layout_padding" id="contact">
     <div class="section_number">
       04
     </div>
@@ -310,37 +310,58 @@
         </h2>
       </div>
     </div>
+  
     <div class="container">
       <div class="row">
         <div class="col-md-6 mx-auto">
-          <form action="">
-            <div>
-              <input type="text" placeholder="Tu nombre" />
+          
+          <form 
+            name="contacto"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
+            <!-- Campo oculto obligatorio -->
+            <input type="hidden" name="form-name" value="contacto">
+  
+            <!-- Honeypot (oculto para usuarios reales) -->
+            <div style="display:none;">
+              <input name="bot-field" />
             </div>
+  
             <div>
-              <input type="email" placeholder="Tu Email" />
+              <input type="text" name="nombre" placeholder="Tu nombre" required />
             </div>
+  
             <div>
-              <input type="text" placeholder="Tu numero de telefono" />
+              <input type="email" name="email" placeholder="Tu Email" required />
             </div>
+  
             <div>
-              <input type="text" class="message-box" placeholder="Escribí tu mensaje" />
+              <input type="text" name="telefono" placeholder="Tu número de teléfono" />
             </div>
-            <div class="d-flex  mt-4 ">
-              <button>
+  
+            <div>
+              <textarea name="mensaje" class="message-box" placeholder="Escribí tu mensaje" required></textarea>
+            </div>
+  
+            <div class="d-flex mt-4">
+              <button type="submit">
                 ENVIAR
               </button>
             </div>
           </form>
+  
         </div>
       </div>
     </div>
   </section>
+  
 
   <!-- end contact section -->
 
   <!-- map section -->
-  <div id="ubicacion" class="container container-ubicacion">
+  <div class="container container-ubicacion" id="location">
     <div class="heading_container justify-content-center">
       <h2 class="ubicacion">
         Ubicación
@@ -407,36 +428,36 @@
             </h5>
             <div class="insta_container">
               <div>
-                <a href="">
+                <a href="https://www.instagram.com/agora_disenoyconstruccion?igsh=OGkxOXk1OXA3bXph">
                   <div class="insta-box b-1">
                     <img src="images/20 a.jpg" alt="">
                   </div>
                 </a>
-                <a href="">
+                <a href="https://www.instagram.com/agora_disenoyconstruccion?igsh=OGkxOXk1OXA3bXph">
                   <div class="insta-box b-2">
                     <img src="images/14 a.jpg" alt="">
                   </div>
                 </a>
               </div>
               <div>
-                <a href="">
+                <a href="https://www.instagram.com/agora_disenoyconstruccion?igsh=OGkxOXk1OXA3bXph">
                   <div class="insta-box b-3">
                     <img src="images/18 a.jpg" alt="">
                   </div>
                 </a>
-                <a href="">
+                <a href="https://www.instagram.com/agora_disenoyconstruccion?igsh=OGkxOXk1OXA3bXph">
                   <div class="insta-box b-4">
                     <img src="images/7 a.jpg" alt="">
                   </div>
                 </a>
               </div>
               <div>
-                <a href="">
+                <a href="https://www.instagram.com/agora_disenoyconstruccion?igsh=OGkxOXk1OXA3bXph">
                   <div class="insta-box b-3">
                     <img src="images/1.jpg" alt="">
                   </div>
                 </a>
-                <a href="">
+                <a href="https://www.instagram.com/agora_disenoyconstruccion?igsh=OGkxOXk1OXA3bXph">
                   <div class="insta-box b-4">
                     <img src="images/6 a.jpg" alt="">
                   </div>
@@ -452,18 +473,20 @@
             </h5>
             <div>
               <img src="images/google-maps.png" alt="">
-              <p>Av. Enrique Ocampo 263, entre Gral. Lavalle y Gral. Navarro, Catamarca.</p>
+              <a href="https://www.google.com/maps/place/Av.+Enrique+Ocampo+263,+K4700+San+Fernando+del+Valle+de+Catamarca,+Catamarca/@-28.4702911,-65.7927109,844m/data=!3m2!1e3!4b1!4m6!3m5!1s0x9424289356718609:0x2974f740599ac809!8m2!3d-28.4702958!4d-65.790136!16s%2Fg%2F11x5n51q6g?entry=ttu&g_ep=EgoyMDI1MTIwOC4wIKXMDSoASAFQAw%3D%3D">
+                <p>Av. Enrique Ocampo 263, entre Gral. Lavalle y Gral. Navarro, Catamarca.</p>
+              </a>
             </div>
             <div>
               <img src="images/whatsapp.png" alt="">
               <p>
-                +01 1234567890
+                +54 9 383 451-6154
               </p>
             </div>
             <div>
               <img src="images/gmail.png" alt="">
               <p>
-                demo@gmail.com
+                Quintarguillermo@gmail
               </p>
             </div>
           </div>
@@ -483,9 +506,8 @@
   <!-- footer section -->
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript" src="js/custom.js"></script>
-
+  <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
