@@ -15,9 +15,7 @@ body {
   background-color: #ffffff;
   overflow-x: hidden;
 }
-.ubicacion {
-  background: #d61515;
-}
+
 .map_container{
   width: 100vw;
   display: flex;
