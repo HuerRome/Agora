@@ -398,8 +398,6 @@ a:focus {
   position: relative;
 }
 
-
-
 .why_section .section_number {
   display: block;
   position: absolute;
@@ -716,16 +714,19 @@ a:focus {
   outline: none;
   border: none;
   border-radius: 30px;
-  border: 1px solid #dc373d;
+  border: 1px solid #25d366;
   color: #fff;
   font-weight: bold;
   margin: 0 auto;
-  background-color: #dc373d;
+  background-color: #25d366;
 }
 
 .contact_section button:hover {
-  color: #dc373d;
-  background-color: transparent;
+  background-color: #2df375;
+}
+
+.contact_section img{
+  width: 24px;
 }
 
 .map_section .map_container {
