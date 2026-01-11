@@ -85,6 +85,7 @@
 
   .heading_container h2 {
     padding-left: 45px;
+    padding-left: 0;
   }
 
   .slider_section .detail_box {
