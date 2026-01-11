@@ -71,23 +71,27 @@ body {
 }
 
 .heading_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  
 }
 
 .heading_container h2 {
   position: relative;
   font-weight: bold;
+  text-align: center;
 }
 
 .heading_container h2::before {
-  content: url(../images/1.jpg);
+  content: none !important;
+  /*content: url(../images/1.jpg);
   position: absolute;
   top: 50%;
   left: -35px;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+          transform: translateY(-50%);*/
 }
 
 /*header section*/
@@ -101,7 +105,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  background-image: url(../images/3.png);
+  background-image: url(../images/Fondo\ 2.jpg);
   background-size: cover;
   background-position: top right;
 
